@@ -9,6 +9,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "admin_usuario")
-public class AdminUsuario {
+public class AdminUsuario implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_admin")
+    private Integer idAdmin;
     
 }
