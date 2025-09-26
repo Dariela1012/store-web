@@ -15,5 +15,11 @@ public class AdminUsuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_admin")
     private Integer idAdmin;
+
+    @Column(name= "usuario", nullable = false, unique = true, length = 50)
+    private String usuario;
+
+    @Column(name = "contrasenia", nullable = false)
+    private String contrasenia;
     
 }
