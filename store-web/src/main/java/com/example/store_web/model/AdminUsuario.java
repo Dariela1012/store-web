@@ -16,10 +16,25 @@ public class AdminUsuario implements UserDetails {
     @Column(name = "id_admin")
     private Integer idAdmin;
 
-    @Column(name= "usuario", nullable = false, unique = true, length = 50)
+    @Column(name = "usuario", nullable = false, unique = true, length = 50)
     private String usuario;
 
     @Column(name = "contrasenia", nullable = false)
     private String contrasenia;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities(){
+        return Collections.singleton(new SimpleGrantedAuthoeity("ROLE_ADMIN"));
+    }
+
+    @Override
+    public String getPassword(){
+        return contrasenia;
+    }
+
+    @Override
+    public String getUsername(){
+        return usuario;
+    }
     
 }
