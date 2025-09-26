@@ -72,4 +72,12 @@ public class AdminUsuario implements UserDetails {
     public void setUsuario(String usuario){
         this.usuario = usuario;
     }
+
+    public String getContrasenia(){
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia){
+        this.contrasenia = contrasenia;
+    }
 }
