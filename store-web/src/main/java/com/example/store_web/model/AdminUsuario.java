@@ -51,5 +51,25 @@ public class AdminUsuario implements UserDetails {
     public boolean isCredentialsNonExpired(){
         return true;
     }
+
+    @Override
+    public boolean isEnabled(){
+        return true;
+    }
+
+    public Integer getIdAdmin(){
+        return idAdmin;
+    }
+
+    public void setIdAdmin(Integer idAdmin){
+        this.idAdmin = idAdmin;
+    }
     
+    public String getUsuario(){
+        return usuario;
+    }
+
+    public void setUsuario(String usuario){
+        this.usuario = usuario;
+    }
 }
