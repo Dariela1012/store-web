@@ -28,4 +28,11 @@ public class Producto {
 
     @Column(name = "genero", nullable = false, length = 10)
     private String genero;
+
+    @Column(name = "edad_sugerida", length = 20)
+    private String edadSugerida;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private Categoria categoria;
 }
