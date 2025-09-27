@@ -16,4 +16,16 @@ public class Producto {
 
     @Column(name = "descripcion", columnDefinition = "TEXT")
     private String descripcion;
+
+    @Column(name = "precio", nullable = false, precision = 10)
+    private Double precio;
+
+    @Column(name = "imagen_url", length = 255)
+    private String imagenUrl;
+
+    @Column(name = "talla", length = 10)
+    private String talla;
+
+    @Column(name = "genero", nullable = false, length = 10)
+    private String genero;
 }
