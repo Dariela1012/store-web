@@ -19,5 +19,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class PageController{
+
+    private final ContactoService contactoService;
+    private final EmailService emailService;
+    private final ProductoService productoService;
+    private final CategoriaService categoriaService;
+
+    public PageController(ContactoService contactoService, EmailService emailService, ProductoService productoService, CategoriaService categoriaService) {
+        this.contactoService = contactoService;
+        this.emailService = emailService;
+        this.productoService = productoService;
+        this.categoriaService = categoriaService;
     
 }
