@@ -30,5 +30,11 @@ public class PageController{
         this.emailService = emailService;
         this.productoService = productoService;
         this.categoriaService = categoriaService;
-    
+
+}
+
+@GetMapping("/")
+  public String homePage(Model model, HttpServletRequest request) {
+    model.addAttribute("currentURI", request.getRequestURI());
+    return "pages/index";
 }
