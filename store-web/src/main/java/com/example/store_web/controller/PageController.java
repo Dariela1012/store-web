@@ -38,3 +38,7 @@ public class PageController{
     model.addAttribute("currentURI", request.getRequestURI());
     return "pages/index";
 }
+
+@PostMapping("/correo-enviado")
+public String enviarFormularioContacto(Contacto contacto, Model model) {
+}
