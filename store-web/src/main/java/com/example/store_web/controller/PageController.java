@@ -41,4 +41,21 @@ public class PageController{
 
 @PostMapping("/correo-enviado")
 public String enviarFormularioContacto(Contacto contacto, Model model) {
+  try {
+      contacto.setFechaEnvio(LocalDateTime.now());
+
+      contactoService.guardar(contacto);
+
+      emailService.sendContactEmail(contacto, contacto.getMensaje());
+
+      System.out.println("Mensaje de contacto recibido y correo enviado");
+      System.out.println("Nombres: " + contacto.getNombre() + " " + contacto.getApellido());
+      System.out.println("Numero: " + contacto.getNumero());
+      System.out.println("Email: " + contacto.getCorreo());
+      System.out.println("Mensaje: " + contacto.getMensaje());
+
+      model.addAttribute("mensaje", "¡Gracias por tu interés! Ha sido enviado con éxito.");
+      model.addAttribute("tipoMensaje", "success");
+      model.addAttribute("mensaje", "Tu mensaje ha sido enviado. ¡Gracias!");
+  }
 }
