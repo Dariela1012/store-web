@@ -57,5 +57,11 @@ public String enviarFormularioContacto(Contacto contacto, Model model) {
       model.addAttribute("mensaje", "¡Gracias por tu interés! Ha sido enviado con éxito.");
       model.addAttribute("tipoMensaje", "success");
       model.addAttribute("mensaje", "Tu mensaje ha sido enviado. ¡Gracias!");
-  }
+ 
+    }catch (Exception e) {
+      System.err.println("Error al procesar formulario de contacto o enviar email: " + e.getMessage());
+      model.addAttribute("mensaje", "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.");
+      model.addAttribute("tipoMensaje", "danger");
+    }
+    return "redirect:/";
 }
