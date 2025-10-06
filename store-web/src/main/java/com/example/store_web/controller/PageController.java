@@ -65,3 +65,10 @@ public String enviarFormularioContacto(Contacto contacto, Model model) {
     }
     return "redirect:/";
 }
+
+@GetMapping("/login")
+public String loginPage(Model model, HttpServletRequest request) {
+  model.addAttribute("currentURI", request.getRequestURI());
+  return "pages/login";
+}
+
