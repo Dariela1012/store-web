@@ -71,4 +71,13 @@ public String loginPage(Model model, HttpServletRequest request) {
   model.addAttribute("currentURI", request.getRequestURI());
   return "pages/login";
 }
+@GetMapping("/catalogo")
+public String verCatalogo(Model model,
+  @RequestParam(name = "categoria", required = false) String nombreCategoria,
+  @RequestParam(name = "genero", required = false) String genero,
+  @RequestParam(name = "edad", required = false) String edadSugerida,
+  HttpServletRequest request) {
+                            
+  }
+
 
