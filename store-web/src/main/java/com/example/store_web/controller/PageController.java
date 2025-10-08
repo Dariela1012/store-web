@@ -77,7 +77,16 @@ public String verCatalogo(Model model,
   @RequestParam(name = "genero", required = false) String genero,
   @RequestParam(name = "edad", required = false) String edadSugerida,
   HttpServletRequest request) {
-                            
-  }
+    nombreCategoria = esValorPresente(nombreCategoria) ? nombreCategoria : null;
+    genero = esValorPresente(genero) ? genero : null;
+    edadSugerida = esValorPresente(edadSugerida) ? edadSugerida : null;
+
+    List<Producto> productos;
+    if(nombreCategoria != null || genero != null || edadSugerida != null) {
+      productos = productoService.filtrarProductos(nombreCategoria, genero, edadSugerida);                           
+  } else {
+      productos = productoService.listarTodos();
+    }
+
 
 
