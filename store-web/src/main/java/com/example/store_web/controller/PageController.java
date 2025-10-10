@@ -81,12 +81,40 @@ public String verCatalogo(Model model,
     genero = esValorPresente(genero) ? genero : null;
     edadSugerida = esValorPresente(edadSugerida) ? edadSugerida : null;
 
-    List<Producto> productos;
-    if(nombreCategoria != null || genero != null || edadSugerida != null) {
-      productos = productoService.filtrarProductos(nombreCategoria, genero, edadSugerida);                           
+  List<Producto> productos;
+  if(nombreCategoria != null || genero != null || edadSugerida != null) {
+    productos = productoService.filtrarProductos(nombreCategoria, genero, edadSugerida);                           
   } else {
       productos = productoService.listarTodos();
+  }
+  List<Categoria> categorias = categoriaService.listarTodos();
+    model.addAttribute("productos", productos);
+    model.addAttribute("categorias", categorias);
+    model.addAttribute("currentURI", request.getRequestURI());
+
+    model.addAttribute("categoriaSeleccionada", nombreCategoria);
+    model.addAttribute("generoSeleccionado", genero);
+    model.addAttribute("edadSeleccionada", edadSugerida);
+
+    return "pages/catalogo";
+  }
+
+  @GetMapping("/producto/{id}")
+  public String verDetalleProducto(@PathVariable("id") Integer id, Model model) {
+    Producto producto = productoService.buscarPorId(id);
+    if (producto == null) {
+      return "redirect:/catalogo";
     }
+    model.addAttribute("producto", producto);
+    return "pages/detalle-producto";
+  }
+
+  private boolean esValorPresente(String valor) {
+    return valor != null && !valor.trim().isEmpty();
+  }
+}
+
+
 
 
 
