@@ -40,4 +40,43 @@ public class ProductoService {
     return message;
    }
 
+  @Transactional
+  public void eliminar(Integer id) {
+    Producto producto = entityManager.find(Producto.class, id);
+    if (producto != null) {
+      entityManager.remove(producto);
+    }
+  }
+
+  public Producto buscarPorId(Integer id) {
+    return entityManager.find(Producto.class, id);
+  }
+
+  public List<Producto> listarTodos() {
+    return entityManager.createQuery("SELECT p FROM Producto p", Producto.class).getResultList();
+  }
+
+  public List<Producto> listarProductosPaginados(int firstResult, int maxResults) {
+    TypedQuery<Producto> query = entityManager.createQuery("SELECT p FROM Producto p", Producto.class);
+    query.setFirstResult(firstResult);
+    query.setMaxResults(maxResults);
+    return query.getResultList();
+  }
+
+  public long contarProductos() {
+    return (long) entityManager.createQuery("SELECT COUNT(p) FROM Producto p").getSingleResult();
+  }
+
+  public List<Producto> filtrarProductos(String nombreCategoria, String genero, String edadSugerida) {
+    StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("sp_filtrar_productos", Producto.class);
+    storedProcedure.registerStoredProcedureParameter("p_nombre_categoria", String.class, ParameterMode.IN);
+    storedProcedure.registerStoredProcedureParameter("p_genero", String.class, ParameterMode.IN);
+    storedProcedure.registerStoredProcedureParameter("p_edad_sugerida", String.class, ParameterMode.IN);
+    storedProcedure.setParameter("p_nombre_categoria", nombreCategoria);
+    storedProcedure.setParameter("p_genero", genero);
+    storedProcedure.setParameter("p_edad_sugerida", edadSugerida);
+
+    return storedProcedure.getResultList();
+  }
+
 }
