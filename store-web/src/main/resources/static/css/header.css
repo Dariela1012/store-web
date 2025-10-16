@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #E91E63;
+    --secondary-color: #FFC107;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --white-color: #fff;
+    --font-heading: 'Pacifico', cursive;
+    --font-poppins: 'Poppins', sans-serif;
+    --primary-color-rgb: 233, 30, 99;
+}
+
+.navbar {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color) !important;
+    border-bottom: 1px solid var(--light-color);
+}
+
+body {
+     padding-top: 90px;
+}
