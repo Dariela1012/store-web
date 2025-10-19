@@ -4,7 +4,7 @@ Durante esta semana apliqué una herramienta de gestión de actividades para org
 Usé *Trello* para planificar y controlar los avances del desarrollo, dividiendo las actividades en tres columnas principales:
 
 - *Por hacer*: tareas pendientes como creación de entidades y servicios.
-- *En progreso*: tareas en desarrollo, como integración de vistas y controladores.
+- *En proceso*: tareas en desarrollo, como integración de vistas y controladores.
 - *Completado*: tareas terminadas y verificadas.
 
 En Trello creé tarjetas para cada módulo del proyecto.
