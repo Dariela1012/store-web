@@ -10,6 +10,6 @@ Usé *Trello* para planificar y controlar los avances del desarrollo, dividiendo
 En Trello creé tarjetas para cada módulo del proyecto.
 
 Además, registré el avance en GitHub con un commit titulado:  
-"creación tablero de gestión (Trello) y registro de tareas"
+"creación tablero de gestión (Trello) y registro de tareas".
   
 *Repositorio:* [store-web](https://github.com/Dariela1012/store-web)
