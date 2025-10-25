@@ -13,3 +13,5 @@ Además, registré el avance en GitHub con un commit titulado:
 "creación tablero de gestión (Trello) y registro de tareas".
   
 *Repositorio:* [store-web](https://github.com/Dariela1012/store-web)
+
+durante el desarrollo se utlizó la herramienta Jira
