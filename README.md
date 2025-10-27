@@ -14,4 +14,4 @@ Además, registré el avance en GitHub con un commit titulado:
   
 *Repositorio:* [store-web](https://github.com/Dariela1012/store-web)
 
-durante el desarrollo se utlizó la herramienta Jira
+Durante el desarrollo se utlizó la herramienta Jira
