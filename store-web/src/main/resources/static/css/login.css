@@ -1,0 +1,87 @@
+.login-body {
+    background-color: #f4f7f6;
+    font-family: 'Raleway', sans-serif;
+}
+
+.login-card {
+    border: none;
+    border-radius: 15px;
+}
+
+.login-page-logo-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #E91E63;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+.login-page-logo-text:hover {
+    color: #c2185b;
+}
+
+.login-page-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-card .form-control {
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.login-card .form-control:focus {
+    border-color: #E91E63;
+    box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
+}
+
+.login-card .form-floating > label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.login-card .form-floating > label i {
+    font-size: 0.9em;
+}
+
+.login-submit-btn {
+    background-color: #E91E63;
+    border-color: #E91E63;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.login-submit-btn:hover {
+    background-color: #c2185b;
+    border-color: #b91652;
+}
+
+.back-to-home-link {
+    font-size: 0.9rem;
+    color: #E91E63;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-to-home-link:hover {
+    color: #c2185b;
+    text-decoration: underline;
+}
+
+.back-to-home-link {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.back-to-home-link:hover {
+    color: #E91E63;
+}
