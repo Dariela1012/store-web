@@ -1,0 +1,52 @@
+#admin-productos-section {
+    padding-bottom: 50px;
+}
+
+.product-image-thumbnail {
+    width: 50px;
+    height: auto;
+    border-radius: .25rem;
+}
+
+.action-buttons .btn {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    margin-right: .25rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 80px;
+    text-align: center;
+}
+
+.table td:nth-child(3),
+.table th:nth-child(3) {
+    width: 120px;
+    text-align: right;
+}
+
+.table td:nth-child(4) {
+    width: 80px;
+    text-align: center;
+}
+
+.table th:last-child,
+.table td:last-child {
+    width: 150px;
+    text-align: center;
+}
+
+.table tr {
+    font-size: 12px;
+}
