@@ -25,7 +25,7 @@ public class SecurityConfig {
         this.userDetailsService = userDetailsService;
     }
 
-    // 🔥 Necesario en Spring 3.x — registra tu AuthenticationProvider
+    
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -38,7 +38,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
-            .authenticationProvider(authenticationProvider()) // 👈 obligatorio en Spring 3
+            .authenticationProvider(authenticationProvider()) 
             .csrf(csrf -> csrf
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
             )
