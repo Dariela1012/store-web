@@ -15,3 +15,21 @@ Además, registré el avance en GitHub con un commit titulado:
 *Repositorio:* [store-web](https://github.com/Dariela1012/store-web)
 
 Durante el desarrollo se utlizó la herramienta Jira
+
+## Actualización de funcionalidades completadas
+
+Se finalizaron los componentes correspondientes al módulo **Store Web**, incluyendo:
+
+###  Estilos (CSS)
+- Se implementaron y organizaron los estilos para las vistas principales.
+- Se añadieron hojas de estilo dedicadas para mejorar la estructura y mantenimiento del proyecto.
+
+###  Clases Service
+- Se completaron las clases del **Service Layer**, responsables de la lógica de negocio.
+- Incluyen validaciones, coordinación con repositorios y manejo de reglas de procesamiento.
+
+###  JavaScript
+- Se desarrollaron los archivos JavaScript necesarios para la interacción dinámica de las vistas.
+- Se agregaron funciones para validaciones, manejo del DOM y peticiones asíncronas.
+
+Todos estos elementos fueron probados, integrados y versionados correctamente.
