@@ -30,4 +30,4 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B -DskipTests clean package
-        working-directory: ./store-web/store-web
+        working-directory: ./store-web
