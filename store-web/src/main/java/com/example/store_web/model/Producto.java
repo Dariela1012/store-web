@@ -6,107 +6,106 @@ import jakarta.persistence.*;
 @Table(name = "producto")
 public class Producto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_producto")
-    private Integer id_producto;
-    
-    @Column(name = "nombre", nullable = false, length = 100)
-    private String nombre;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id_producto")
+  private Integer idProducto;
 
-    @Column(name = "descripcion", columnDefinition = "TEXT")
-    private String descripcion;
+  @Column(name = "nombre", nullable = false, length = 100)
+  private String nombre;
 
-    @Column(name = "precio", nullable = false, precision = 10)
-    private Double precio;
+  @Column(name = "descripcion", columnDefinition = "TEXT")
+  private String descripcion;
 
-    @Column(name = "imagen_url", length = 255)
-    private String imagenUrl;
+  @Column(name = "precio", nullable = false, precision = 10)
+  private Double precio;
 
-    @Column(name = "talla", length = 10)
-    private String talla;
+  @Column(name = "imagen_url", length = 255)
+  private String imagenUrl;
 
-    @Column(name = "genero", nullable = false, length = 10)
-    private String genero;
+  @Column(name = "talla", length = 10)
+  private String talla;
 
-    @Column(name = "edad_sugerida", length = 20)
-    private String edadSugerida;
+  @Column(name = "genero", nullable = false, length = 10)
+  private String genero;
 
-    @ManyToOne
-    @JoinColumn(name = "id_categoria")
-    private Categoria categoria;
+  @Column(name = "edad_sugerida", length = 20)
+  private String edadSugerida;
 
-    public Integer getIdProducto() {
+  @ManyToOne
+  @JoinColumn(name = "id_categoria")
+  private Categoria categoria;
+
+  public Integer getIdProducto() {
     return idProducto;
-    }
+  }
 
-    public void setIdProducto(Integer idProducto) {
-        this.idProducto = idProducto;
-    }
+  public void setIdProducto(Integer idProducto) {
+    this.idProducto = idProducto;
+  }
 
-    public String getNombre() {
-        return nombre;
-    }
+  public String getNombre() {
+    return nombre;
+  }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
 
-    
-    public String getDescripcion() {
-        return descripcion;
-    }
+  public String getDescripcion() {
+    return descripcion;
+  }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+  public void setDescripcion(String descripcion) {
+    this.descripcion = descripcion;
+  }
 
-    public Double getPrecio() {
-        return precio;
-    }
+  public Double getPrecio() {
+    return precio;
+  }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
+  public void setPrecio(Double precio) {
+    this.precio = precio;
+  }
 
-    public String getImagenUrl() {
-        return imagenUrl;
-    }
+  public String getImagenUrl() {
+    return imagenUrl;
+  }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
-    }
+  public void setImagenUrl(String imagenUrl) {
+    this.imagenUrl = imagenUrl;
+  }
 
-    public String getTalla() {
-        return talla;
-    }
+  public String getTalla() {
+    return talla;
+  }
 
-    public void setTalla(String talla) {
-        this.talla = talla;
-    }
+  public void setTalla(String talla) {
+    this.talla = talla;
+  }
 
-    public String getGenero() {
-        return genero;
-    }
+  public String getGenero() {
+    return genero;
+  }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+  public void setGenero(String genero) {
+    this.genero = genero;
+  }
 
-    public String getEdadSugerida() {
-        return edadSugerida;
-    }
+  public String getEdadSugerida() {
+    return edadSugerida;
+  }
 
-    public void setEdadSugerida(String edadSugerida) {
-        this.edadSugerida = edadSugerida;
-    }
+  public void setEdadSugerida(String edadSugerida) {
+    this.edadSugerida = edadSugerida;
+  }
 
-    public Categoria getCategoria() {
-        return categoria;
-    }
+  public Categoria getCategoria() {
+    return categoria;
+  }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
+  public void setCategoria(Categoria categoria) {
+    this.categoria = categoria;
+  }
 
 }
