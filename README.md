@@ -34,3 +34,4 @@ Se finalizaron los componentes correspondientes al módulo **Store Web**, incluy
 
 Todos estos elementos fueron probados, integrados y versionados correctamente.
 ACTUALIZACIONES
+- 
