@@ -32,4 +32,4 @@ Se finalizaron los componentes correspondientes al módulo **Store Web**, incluy
 - Se desarrollaron los archivos JavaScript necesarios para la interacción dinámica de las vistas.
 - Se agregaron funciones para validaciones, manejo del DOM y peticiones asíncronas.
 
-Todos estos elementos fueron probados, integrados y versionados correctamente.
+Todos estos elementos fueron probados, integrados y versionados correctamente. Hasta el día 06/12/2025
